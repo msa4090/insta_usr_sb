@@ -9,11 +9,13 @@ import com.sbs.untact.dto.Article;
 
 @Mapper
 public interface ArticleDao {		
-	void modifyArticleById(@Param("id") int id, @Param("title") String title, @Param("body") String body);
+	void modifyArticle(@Param("id") int id, @Param("title") String title, @Param("body") String body);
 	
 	void writeArticle(@Param("boardId") int boardId, @Param("memberId") int memberId, @Param("title") String title, @Param("body") String body);	
 	
-	Article getArticle(@Param("id") int id);
+	Article getArticleById(@Param("id") int id);
+	
+	int getLastInsertId();
 	
 	void deleteArticleById(@Param("id") int id);	
 }

@@ -5,10 +5,15 @@
 
 <mapper namespace="com.sbs.untact.dao.ArticleDao">
 
-	<select id="getArticle" resultType="Article">
+	<select id="getArticleById" resultType="Article">
 		SELECT *
 		FROM article AS A
 		WHERE A.id = #{id}
+		AND A.delStatus = 0
+	</select>
+	
+	<select id="getLastInsertId" resultType="int">
+		SELECT LAST_INSERT_ID()		
 	</select>
 
 	<insert id="writeArticle">
@@ -25,14 +30,14 @@
 		UPDATE article
 		SET updateDate = NOW(),
 		title = #{title},
-		body = #{body},
+		body = #{body}
 		WHERE id = #{id}
 	</update>
 
 	<update id="deleteArticleById">
 		UPDATE article
 		SET delStatus = 1,
-		delDate = NOW(),
+		delDate = NOW()
 		WHERE id = #{id}
 	</update>
 
