@@ -3,6 +3,7 @@ DROP DATABASE IF EXISTS insta;
 CREATE DATABASE insta;
 USE insta;
 
+
 # 게시물 테이블 생성
 # delStatus : 0 = 삭제 안한것, 1 = 삭제한 것 // 데이터 추적을 위해
 CREATE TABLE article (
