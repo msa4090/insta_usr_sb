@@ -32,7 +32,7 @@
 	<div class="site-wrap">
 		<header class="top-bar top-bar--fly">
 			<div class="container mx-auto flex h-full">
-				<a href="/" class="px-3 flex items-center">
+				<a href="#" class="px-3 flex items-center">
 					<span>
 						<i class="fas fa-lemon"></i>
 					</span>
@@ -44,7 +44,7 @@
 				<nav class="menu-box-1">
 					<ul class="flex h-full">
 						<li>
-							<a href="/" class="h-full flex items-center px-5">
+							<a href="#" class="h-full flex items-center px-5">
 								<span>
 									<i class="fas fa-home"></i>
 								</span>
@@ -52,7 +52,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="/" class="h-full flex items-center px-5">
+							<a href="#" class="h-full flex items-center px-5">
 								<span>
 									<i class="far fa-newspaper"></i>
 								</span>
@@ -102,12 +102,7 @@
 
 		</header>
 		
-		<div class="title-bar">
-			<div class="container mx-auto">
-				<span><i class="fas fa-home"></i></span>
-				<span>HOME</span>			
-			</div>
-		</div>
+		<h1>게시물 리스트</h1>
 	</div>
 </body>
 </html> 

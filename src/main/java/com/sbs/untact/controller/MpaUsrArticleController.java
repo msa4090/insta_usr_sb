@@ -48,6 +48,13 @@ public class MpaUsrArticleController {
 		return new ResultData("S-1", article.getId() + "번 글 입니다.", "article", article);
 	}
 	
+	@RequestMapping("/mpaUsr/article/list")	
+	public String showList(int boardId) {
+		
+		
+		return "mpaUsr/article/list";
+	}
+	
 	@RequestMapping("/mpaUsr/article/doDelete")
 	@ResponseBody
 	public ResultData doDelete(Integer id) {		
