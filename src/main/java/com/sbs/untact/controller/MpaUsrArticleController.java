@@ -49,8 +49,7 @@ public class MpaUsrArticleController {
 	}
 	
 	@RequestMapping("/mpaUsr/article/list")	
-	public String showList(int boardId) {
-		
+	public String showList(int boardId) {		
 		
 		return "mpaUsr/article/list";
 	}
