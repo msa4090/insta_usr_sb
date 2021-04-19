@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.sbs.untact.dto.Article;
+import com.sbs.untact.dto.Board;
 
 // 데이터 저장, 삭제, 수정 등
 
@@ -17,5 +18,7 @@ public interface ArticleDao {
 	
 	int getLastInsertId();
 	
-	void deleteArticleById(@Param("id") int id);	
+	void deleteArticleById(@Param("id") int id);
+
+	Board getBoardById(@Param("id") int id);	
 }

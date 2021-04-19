@@ -5,6 +5,13 @@
 
 <mapper namespace="com.sbs.untact.dao.ArticleDao">
 
+	<select id="getBoardById" resultType="Board">
+		SELECT *
+		FROM Board AS B
+		WHERE B.id = #{id}
+		AND B.delStatus = 0
+	</select>
+
 	<select id="getArticleById" resultType="Article">
 		SELECT *
 		FROM article AS A
