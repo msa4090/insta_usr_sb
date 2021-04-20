@@ -16,9 +16,12 @@ import com.sbs.untact.dto.ResultData;
 import com.sbs.untact.service.ArticleService;
 import com.sbs.untact.util.Util;
 
+import lombok.extern.slf4j.Slf4j;
+
 // 삽입, 조회, 수정, 삭제
 
 @Controller
+@Slf4j
 public class MpaUsrArticleController {
 	
 	@Autowired
@@ -68,8 +71,12 @@ public class MpaUsrArticleController {
 	}
 	
 	@RequestMapping("/mpaUsr/article/list")	
-	public String showList(HttpServletRequest req, int boardId, @RequestParam(defaultValue="1") int page) {
+	public String showList(HttpServletRequest req, @RequestParam(defaultValue="1") int boardId, String searchKeyword, 
+			@RequestParam(defaultValue="1") int page) {
 		Board board = articleService.getBoardById(boardId);
+		
+		// log : 좀 더 자세하게 / application.yml - custom - logging - level = debug : 보임, info : 안보임
+		log.debug("searchKeyword : " + searchKeyword);		
 				
 		if(board == null) {
 			return msgAndBack(req, boardId + "번 게시판이 존재하지 않습니다.");
