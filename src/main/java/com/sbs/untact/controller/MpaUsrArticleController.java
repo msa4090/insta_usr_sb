@@ -22,6 +22,11 @@ public class MpaUsrArticleController {
 	
 	@Autowired
 	private ArticleService articleService;
+	
+	private String msgAndBack(HttpServletRequest req, String msg) {
+		req.setAttribute("msg", msg);
+		return "common/redirect";
+	}
 		
 	@RequestMapping("/mpaUsr/article/doWrite")
 	@ResponseBody
@@ -58,16 +63,14 @@ public class MpaUsrArticleController {
 		Board board = articleService.getBoardById(boardId);
 				
 		if(board == null) {
-			req.setAttribute("msg", boardId + "번 게시판이 존재하지 않습니다.");
-			
-			return "common/redirect";
+			return msgAndBack(req, boardId + "번 게시판이 존재하지 않습니다.");
 		}
 		
 		req.setAttribute("board", board);
 		
 		return "mpaUsr/article/list";
-	}
-	
+	}	
+
 	@RequestMapping("/mpaUsr/article/doDelete")
 	@ResponseBody
 	public ResultData doDelete(Integer id) {		
