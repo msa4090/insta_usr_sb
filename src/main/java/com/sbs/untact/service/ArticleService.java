@@ -92,5 +92,9 @@ public class ArticleService {
 	public Board getBoardById(int id) { 
 		return articleDao.getBoardById(id);
 	}
+
+	public int getArticlesTotalCount(int boardId) {
+		return articleDao.getArticlesTotalCount(boardId);
+	}
 	
 }
