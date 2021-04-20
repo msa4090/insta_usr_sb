@@ -25,6 +25,14 @@ public class MpaUsrArticleController {
 	
 	private String msgAndBack(HttpServletRequest req, String msg) {
 		req.setAttribute("msg", msg);
+		req.setAttribute("historyBack", true);
+		return "common/redirect";
+	}
+	
+	private String msgAndReplace(HttpServletRequest req, String msg, String replaceUrl) {
+		req.setAttribute("msg", msg);
+		req.setAttribute("replaceUrl", replaceUrl);
+		
 		return "common/redirect";
 	}
 		
@@ -71,12 +79,23 @@ public class MpaUsrArticleController {
 		return "mpaUsr/article/list";
 	}	
 
-	@RequestMapping("/mpaUsr/article/doDelete")
-	@ResponseBody
-	public ResultData doDelete(Integer id) {		
-		return articleService.deleteArticle(id);
+	@RequestMapping("/mpaUsr/article/doDelete")	
+	public String doDelete(HttpServletRequest req, Integer id) {		
+		if (Util.isEmpty(id)) {
+			return msgAndBack(req, "id를 입력해주세요.");
+		}
+		
+		ResultData rd = articleService.deleteArticle(id);
+		
+		if (rd.isFail()) {
+			return msgAndBack(req, rd.getMsg()); 
+		}
+		
+		String replaceUrl = "../article/list?boardId=" + rd.getBody().get("boardId");
+		
+		return msgAndReplace(req, rd.getMsg(), replaceUrl);
 	}
-	
+
 	@RequestMapping("mpaUsr/article/doModify")
 	@ResponseBody
 	public ResultData doModify(Integer id, String title, String body) {
