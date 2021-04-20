@@ -1,12 +1,13 @@
 package com.sbs.untact.controller;
 
-import javax.servlet.http.HttpServlet;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sbs.untact.dto.Article;
@@ -67,7 +68,7 @@ public class MpaUsrArticleController {
 	}
 	
 	@RequestMapping("/mpaUsr/article/list")	
-	public String showList(HttpServletRequest req, int boardId) {
+	public String showList(HttpServletRequest req, int boardId, @RequestParam(defaultValue="1") int page) {
 		Board board = articleService.getBoardById(boardId);
 				
 		if(board == null) {
@@ -79,6 +80,19 @@ public class MpaUsrArticleController {
 		int totalItemsCount = articleService.getArticlesTotalCount(boardId);
 		
 		req.setAttribute("totalItemsCount", totalItemsCount);
+		
+		// 한 페이지에 보여줄 수 있는 게시물 최대 개수
+		int itemsCountInAPage = 20;
+		// 총 페이지 수, ceil = 나머지 올림(ceil, round, floor)
+		int totalPage = (int) Math.ceil(totalItemsCount / (double) itemsCountInAPage);
+		
+		// 현재 페이지(임시)		
+		req.setAttribute("page", page);
+		req.setAttribute("totalPage", totalPage);
+		
+		List<Article> articles = articleService.getForPrintArticles(boardId, itemsCountInAPage, page);
+		
+		req.setAttribute("articles", articles);
 		
 		return "mpaUsr/article/list";
 	}	
