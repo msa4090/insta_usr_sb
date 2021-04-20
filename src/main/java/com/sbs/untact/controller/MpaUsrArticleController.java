@@ -18,6 +18,9 @@ import com.sbs.untact.util.Util;
 
 import lombok.extern.slf4j.Slf4j;
 
+// 무엇을 만들기 전에 요구사항과 할 일 리스트를 먼저 만들고 작업할 것(메모장 등)
+// 새로운 것을 적용하기 위해 미니 프로젝트를 따로 만들어서 테스트 하기
+
 // 삽입, 조회, 수정, 삭제
 
 @Controller
@@ -84,7 +87,7 @@ public class MpaUsrArticleController {
 		
 		req.setAttribute("board", board);
 		
-		int totalItemsCount = articleService.getArticlesTotalCount(boardId);
+		int totalItemsCount = articleService.getArticlesTotalCount(boardId, searchKeyword);		
 		
 		req.setAttribute("totalItemsCount", totalItemsCount);
 		
@@ -97,7 +100,7 @@ public class MpaUsrArticleController {
 		req.setAttribute("page", page);
 		req.setAttribute("totalPage", totalPage);
 		
-		List<Article> articles = articleService.getForPrintArticles(boardId, itemsCountInAPage, page);
+		List<Article> articles = articleService.getForPrintArticles(boardId, searchKeyword, itemsCountInAPage, page);
 		
 		req.setAttribute("articles", articles);
 		
