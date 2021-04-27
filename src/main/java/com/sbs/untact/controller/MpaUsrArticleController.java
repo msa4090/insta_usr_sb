@@ -74,12 +74,16 @@ public class MpaUsrArticleController {
 	}
 	
 	@RequestMapping("/mpaUsr/article/list")	
-	public String showList(HttpServletRequest req, @RequestParam(defaultValue="1") int boardId, String searchKeyword, 
+	public String showList(HttpServletRequest req, @RequestParam(defaultValue="1") int boardId, String searchKeywordType, String searchKeyword, 
 			@RequestParam(defaultValue="1") int page) {
 		Board board = articleService.getBoardById(boardId);
 		
+		if (Util.isEmpty(searchKeywordType)) {
+			searchKeywordType = "titleAndBody";
+		}
+		
 		// log : 좀 더 자세하게 / application.yml - custom - logging - level = debug : 보임, info : 안보임
-		log.debug("searchKeyword : " + searchKeyword);		
+		// log.debug("searchKeyword : " + searchKeyword);		
 				
 		if(board == null) {
 			return msgAndBack(req, boardId + "번 게시판이 존재하지 않습니다.");
@@ -87,7 +91,7 @@ public class MpaUsrArticleController {
 		
 		req.setAttribute("board", board);
 		
-		int totalItemsCount = articleService.getArticlesTotalCount(boardId, searchKeyword);		
+		int totalItemsCount = articleService.getArticlesTotalCount(boardId, searchKeywordType, searchKeyword);		
 		
 		req.setAttribute("totalItemsCount", totalItemsCount);
 		
@@ -100,7 +104,7 @@ public class MpaUsrArticleController {
 		req.setAttribute("page", page);
 		req.setAttribute("totalPage", totalPage);
 		
-		List<Article> articles = articleService.getForPrintArticles(boardId, searchKeyword, itemsCountInAPage, page);
+		List<Article> articles = articleService.getForPrintArticles(boardId, searchKeywordType, searchKeyword, itemsCountInAPage, page);
 		
 		req.setAttribute("articles", articles);
 		

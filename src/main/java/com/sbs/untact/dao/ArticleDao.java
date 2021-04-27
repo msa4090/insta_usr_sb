@@ -8,7 +8,6 @@ import org.apache.ibatis.annotations.Param;
 import com.sbs.untact.dto.Article;
 import com.sbs.untact.dto.Board;
 
-// 데이터 저장, 삭제, 수정 등
 
 @Mapper
 public interface ArticleDao {		
@@ -24,8 +23,9 @@ public interface ArticleDao {
 
 	Board getBoardById(@Param("id") int id);
 
-	int getArticlesTotalCount(@Param("boardId") int boardId, @Param("searchKeyword") String searchKeyword);
+	int getArticlesTotalCount(@Param("boardId") int boardId, @Param("searchKeywordType") String searchKeywordType, 
+			@Param("searchKeyword") String searchKeyword);
 
-	List<Article> getForPrintArticles(@Param("boardId") int boardId, @Param("searchKeyword") String searchKeyword, 
-			@Param("limitFrom") int limitFrom, @Param("limitTake") int limitTake);	
+	List<Article> getForPrintArticles(@Param("boardId") int boardId, @Param("searchKeywordType") String searchKeywordType, 
+			@Param("searchKeyword") String searchKeyword, @Param("limitFrom") int limitFrom, @Param("limitTake") int limitTake);	
 }
