@@ -29,7 +29,9 @@
 		<div class="search-form-box mt-2">
 			<!-- form = url 생성기 -->
 			<form action="" class="grid gap-2">
-				<input class="input input-bordered" name ="searchKeyword" type="text" placeholder="검색어를 입력해주세요." maxlength="10" />
+				<!-- board.id 앞에 param을 안붙이는 이유는 boardId의 디폴트값이 1이기 때문에 생략 가능 -->
+				<input type="hidden" name="boradId" value="${board.id}" />				
+				<input value="${param.searchKeyword}" class="input input-bordered" name ="searchKeyword" type="text" placeholder="검색어를 입력해주세요." maxlength="10" />
 				<input type="submit" class="btn btn-sm btn-primary" value="검색" />
 			</form>
 		</div>
