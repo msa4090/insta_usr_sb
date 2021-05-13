@@ -16928,3 +16928,131 @@ Unconditional classes:
 2021-05-14 03:20:18 [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2593f859]
 2021-05-14 03:20:27 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
 2021-05-14 03:20:27 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:20:57 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:20:57 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:21:27 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:21:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:21:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:21:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:22:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:22:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:22:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:22:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:23:18 [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2021-05-14 03:23:18 [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48ab6e51] was not registered for synchronization because synchronization is not active
+2021-05-14 03:23:18 [DEBUG] o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2021-05-14 03:23:18 [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1284830108 wrapping net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1277a647] will not be managed by Spring
+2021-05-14 03:23:18 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - ==>  Preparing: SELECT * FROM Board AS B WHERE B.id = ? AND B.delStatus = 0
+2021-05-14 03:23:18 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - ==> Parameters: 1(Integer)
+2021-05-14 03:23:18 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT * FROM Board AS B WHERE B.id = 1 AND B.delStatus = 0 
+ {executed in 0 msec}
+2021-05-14 03:23:18 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+|id |regdate             |updatedate          |name   |code   |blindstatus |blinddate |delstatus |deldate |hitcount |repiescount |likecount |dislikecount |
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+|1  |2021-05-08 17:38:24 |2021-05-08 17:38:24 |NOTICE |notice |false       |null      |false     |null    |0        |0           |0         |0            |
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+
+2021-05-14 03:23:18 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - <==      Total: 1
+2021-05-14 03:23:18 [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48ab6e51]
+2021-05-14 03:23:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:23:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:23:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:23:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:24:27 [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2021-05-14 03:24:27 [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e0dcb48] was not registered for synchronization because synchronization is not active
+2021-05-14 03:24:27 [DEBUG] o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2021-05-14 03:24:27 [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@10556085 wrapping net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1277a647] will not be managed by Spring
+2021-05-14 03:24:27 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - ==>  Preparing: SELECT * FROM Board AS B WHERE B.id = ? AND B.delStatus = 0
+2021-05-14 03:24:27 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - ==> Parameters: 1(Integer)
+2021-05-14 03:24:27 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT * FROM Board AS B WHERE B.id = 1 AND B.delStatus = 0 
+ {executed in 2 msec}
+2021-05-14 03:24:27 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+|id |regdate             |updatedate          |name   |code   |blindstatus |blinddate |delstatus |deldate |hitcount |repiescount |likecount |dislikecount |
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+|1  |2021-05-08 17:38:24 |2021-05-08 17:38:24 |NOTICE |notice |false       |null      |false     |null    |0        |0           |0         |0            |
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+
+2021-05-14 03:24:27 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - <==      Total: 1
+2021-05-14 03:24:27 [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e0dcb48]
+2021-05-14 03:24:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:24:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:24:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:24:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:25:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:25:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:25:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:25:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:26:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:26:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:26:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:26:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:27:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:27:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:27:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:27:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:28:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:28:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:28:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:28:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:29:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:29:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:29:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:29:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:30:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:30:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:30:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:30:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:31:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:31:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:31:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:31:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:32:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:32:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:32:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:32:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:33:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:33:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:33:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:33:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:34:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:34:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:34:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:34:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:35:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:35:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:35:37 [DEBUG] org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2021-05-14 03:35:37 [DEBUG] org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39e729e7] was not registered for synchronization because synchronization is not active
+2021-05-14 03:35:37 [DEBUG] o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+2021-05-14 03:35:37 [DEBUG] o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@756656191 wrapping net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1277a647] will not be managed by Spring
+2021-05-14 03:35:37 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - ==>  Preparing: SELECT * FROM Board AS B WHERE B.id = ? AND B.delStatus = 0
+2021-05-14 03:35:37 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - ==> Parameters: 1(Integer)
+2021-05-14 03:35:37 [DEBUG] jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT * FROM Board AS B WHERE B.id = 1 AND B.delStatus = 0 
+ {executed in 1 msec}
+2021-05-14 03:35:37 [INFO ] jdbc.resultsettable - 
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+|id |regdate             |updatedate          |name   |code   |blindstatus |blinddate |delstatus |deldate |hitcount |repiescount |likecount |dislikecount |
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+|1  |2021-05-08 17:38:24 |2021-05-08 17:38:24 |NOTICE |notice |false       |null      |false     |null    |0        |0           |0         |0            |
+|---|--------------------|--------------------|-------|-------|------------|----------|----------|--------|---------|------------|----------|-------------|
+
+2021-05-14 03:35:37 [DEBUG] c.s.u.dao.ArticleDao.getBoardById - <==      Total: 1
+2021-05-14 03:35:37 [DEBUG] org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39e729e7]
+2021-05-14 03:35:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:35:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:36:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:36:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:36:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:36:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:37:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:37:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:37:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:37:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:38:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:38:28 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
+2021-05-14 03:38:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2021-05-14 03:38:58 [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Fill pool skipped, pool is at sufficient level.
