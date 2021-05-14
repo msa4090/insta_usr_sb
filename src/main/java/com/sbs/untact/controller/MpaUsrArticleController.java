@@ -41,7 +41,7 @@ public class MpaUsrArticleController {
 	@RequestMapping("/mpaUsr/article/detail")
 	public String showDetail(HttpServletRequest req, int id) {
 
-		Article article = articleService.getArticleById(id);
+		Article article = articleService.getForPrintArticleById(id);
 
 		if(article == null) {
 			return msgAndBack(req, id + "번 게시판이 존재하지 않습니다.");

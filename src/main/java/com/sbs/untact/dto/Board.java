@@ -12,9 +12,7 @@ public class Board {
 	private String regDate;
 	private String updateDate;
 	private String name;
-	private String code;	
-	private boolean blindStatus;
-	private String blindDate;
+	private String code;
 	private boolean delStatus;
 	private String delDate;
 	private int hitCount;

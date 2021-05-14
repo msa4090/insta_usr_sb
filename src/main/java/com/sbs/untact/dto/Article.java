@@ -23,4 +23,15 @@ public class Article {
 	private int repliesCount;
 	private int likeCount;
 	private int dislikeCount;
+
+	private String extra__writerName;
+
+	public String getBodyForPrint() {
+		// nl2br: 줄바꿈 처리
+		String bodyForPrint = body.replaceAll("\r\n", "<br>");
+		bodyForPrint = bodyForPrint.replaceAll("\r", "<br>");
+		bodyForPrint = bodyForPrint.replaceAll("\n", "<br>");
+
+		return bodyForPrint;
+	}
 }

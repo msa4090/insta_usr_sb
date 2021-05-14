@@ -1,12 +1,11 @@
 package com.sbs.untact.dao;
 
-import java.util.List;
-
+import com.sbs.untact.dto.Article;
+import com.sbs.untact.dto.Board;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.sbs.untact.dto.Article;
-import com.sbs.untact.dto.Board;
+import java.util.List;
 
 
 @Mapper
@@ -27,5 +26,7 @@ public interface ArticleDao {
 			@Param("searchKeyword") String searchKeyword);
 
 	List<Article> getForPrintArticles(@Param("boardId") int boardId, @Param("searchKeywordType") String searchKeywordType, 
-			@Param("searchKeyword") String searchKeyword, @Param("limitFrom") int limitFrom, @Param("limitTake") int limitTake);	
+			@Param("searchKeyword") String searchKeyword, @Param("limitFrom") int limitFrom, @Param("limitTake") int limitTake);
+
+    Article getForPrintArticleById(@Param("id") int id);
 }

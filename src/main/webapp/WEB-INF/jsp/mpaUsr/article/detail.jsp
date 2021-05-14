@@ -37,7 +37,7 @@
                         <div class="mt-4">
                             <span class="badge badge-outline">제목</span>
                             <div>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sapiente fuga libero maxime! Quisquam delectus necessitatibus, laboriosam inventore commodi, odio voluptates tenetur excepturi quo consequatur obcaecati, incidunt quam nulla! Porro?
+                                ${article.title}
                             </div>
                         </div>
 
@@ -46,22 +46,22 @@
                         <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                             <div>
                                 <span class="badge badge-primary">번호</span>
-                                <span>1232</span>
+                                <span>${article.id}</span>
                             </div>
 
                             <div>
                                 <span class="badge badge-accent">작성자</span>
-                                <span>홍길동</span>
+                                <span>${article.extra__writerName}</span>
                             </div>
 
                             <div>
                                 <span class="badge">등록날짜</span>
-                                <span class="text-gray-600 text-light">2020-12-12 12:12:12</span>
+                                <span class="text-gray-600 text-light">${article.regDate}</span>
                             </div>
 
                             <div>
                                 <span class="badge">수정날짜</span>
-                                <span class="text-gray-600 text-light">2020-12-12 12:12:12</span>
+                                <span class="text-gray-600 text-light">${article.updateDate}</span>
                             </div>
                         </div>
 
@@ -71,7 +71,7 @@
                                 <img class="rounded" src="https://i.pravatar.cc/250?img=37" alt="">
                             </div>
                             <div class="mt-3">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum sapiente fuga libero maxime! Quisquam delectus necessitatibus, laboriosam inventore commodi, odio voluptates tenetur excepturi quo consequatur obcaecati, incidunt quam nulla! Porro?
+                                ${article.bodyForPrint}
                             </div>
                         </div>
                     </div>
