@@ -38,6 +38,23 @@ public class MpaUsrArticleController {
 		return "common/redirect";
 	}
 
+	@RequestMapping("/mpaUsr/article/detail")
+	public String showDetail(HttpServletRequest req, int id) {
+
+		Article article = articleService.getArticleById(id);
+
+		if(article == null) {
+			return msgAndBack(req, id + "번 게시판이 존재하지 않습니다.");
+		}
+
+		Board board = articleService.getBoardById(article.getBoardId());
+
+		req.setAttribute("article", article);
+		req.setAttribute("board", board);
+
+		return "mpaUsr/article/detail";
+	}
+
 	@RequestMapping("/mpaUsr/article/write")
 	public String showWrite(HttpServletRequest req, @RequestParam(defaultValue="1") int boardId) {
 
@@ -47,7 +64,7 @@ public class MpaUsrArticleController {
 			return msgAndBack(req, boardId + "번 게시판이 존재하지 않습니다.");
 		}
 
-		req.setAttribute("articles", board);
+		req.setAttribute("board", board);
 
 		return "mpaUsr/article/write";
 	}
