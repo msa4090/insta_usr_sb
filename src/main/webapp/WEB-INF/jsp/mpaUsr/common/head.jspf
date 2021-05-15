@@ -104,7 +104,7 @@
 
 		</header>
 
-		<div class="title-bar">
+		<div class="title-bar px-3">
 			<div class="container mx-auto">
 				${pageTitle}
 			</div>
