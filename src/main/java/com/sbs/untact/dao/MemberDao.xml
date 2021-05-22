@@ -29,8 +29,8 @@
 		loginId = #{loginId},
 		loginPw = #{loginPw},
 		name = #{name},
-		nickName = #{nickName},
-		cellPhoneNo = #{cellPhoneNo},
+		nickname = #{nickname},
+		cellphoneNo = #{cellphoneNo},
 		email = #{email}
 	</insert>
 </mapper>

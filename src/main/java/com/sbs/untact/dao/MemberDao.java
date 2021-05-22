@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface MemberDao {
     Member getMemberByLoginId(@Param("loginId") String loginId);
-    Member getMemberById(@Param("loginId") int id);
+    Member getMemberById(@Param("id") int id);
 
     void join(@Param("loginId") String loginId, @Param("loginPw") String loginPw, @Param("name") String name, @Param("nickName") String nickName,
               @Param("cellPhoneNo") String cellPhoneNo, @Param("email") String email);

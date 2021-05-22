@@ -14,8 +14,8 @@ public class Member {
     private String loginId;
     private String loginPw;
     private String name;
-    private String nickName;
-    private String cellPhoneNo;
+    private String nickname;
+    private String cellphoneNo;
     private String email;
     private boolean delStatus;
     private String delDate;
