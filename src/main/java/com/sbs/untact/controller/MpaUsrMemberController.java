@@ -21,8 +21,16 @@ public class MpaUsrMemberController {
     @RequestMapping("/mpaUsr/member/login")
     public String showLogin (HttpServletRequest req) { return "mpaUsr/member/login"; }
 
+    @RequestMapping("/mpaUsr/member/doLogout")
+    public String doLogout(HttpServletRequest req, HttpSession session) {
+        session.removeAttribute("loginedMemberId");
+
+        String msg = "로그아웃 되었습니다.";
+        return Util.msgAndReplace(req, msg, "/");
+    }
+
     @RequestMapping("/mpaUsr/member/doLogin")
-    public String doLogin(HttpServletRequest req, String loginId, String loginPw, String redirectUrl) {
+    public String doLogin(HttpServletRequest req, HttpSession session, String loginId, String loginPw, String redirectUrl) {
 
         Member member = memberService.getMemberByLoginId(loginId);
 
@@ -34,11 +42,11 @@ public class MpaUsrMemberController {
             return Util.msgAndBack(req, loginId + "비밀번호가 일치하지 않습니다.");
         }
 
-        HttpSession session = req.getSession();
+       //HttpSession session = req.getSession();
+
         session.setAttribute("loginedMemberId", member.getId());
 
         String msg = "환영합니다.";
-
         return Util.msgAndReplace(req, msg, redirectUrl);
     }
 
