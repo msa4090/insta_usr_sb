@@ -2,6 +2,7 @@ package com.sbs.untact.dto;
 
 import com.sbs.untact.util.Util;
 
+// 데이터를 가공해서 쓰기 쉽게 한다.
 public class Rq {
     private String currentUrl;
     private Member loginedMember;
@@ -41,5 +42,9 @@ public class Rq {
 
     private String getCurrentUrl() {
         return currentUrl;
+    }
+
+    public String getLoginPageUrl() {
+        return "../member/login?afterLoginUrl=" + getEncodedCurrentUrl();
     }
 }
