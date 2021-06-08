@@ -34,7 +34,15 @@ public class BeforeActionInterceptor implements HandlerInterceptor {
             loginedMember = memberService.getMemberById(loginedMemberId);
         }
 
-        req.setAttribute("rq", new Rq(loginedMember));
+        // ex) /mpaUsr/member/login?afterLoginId=1
+        String currentUrl = req.getRequestURI();    // /mpaUsr/member/login
+        String queryString = req.getQueryString();  // afterLoginId=1
+
+        if (queryString != null && queryString.length() > 0) {
+            currentUrl += "?" + queryString;
+        }
+
+        req.setAttribute("rq", new Rq(loginedMember, currentUrl));
 
         return HandlerInterceptor.super.preHandle(req, resp, handler);
     }
